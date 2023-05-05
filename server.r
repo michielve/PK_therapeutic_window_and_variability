@@ -17,7 +17,7 @@ shinyServer(function(input, output,session) {
     simulation(input,mod)
   })
     
-  ## Not immediately plot the output, with wait a second to see whether the user wants to change something else
+  ## Not immediately plot the output, but wait a second to see whether the user wants to change something else
   gg_object_d <- gg_object %>% debounce(1000)
   
   ## Render the plot
